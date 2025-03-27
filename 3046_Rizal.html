@@ -1,0 +1,86 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Pribadi</title>
+    <link rel="stylesheet" href="3046_Rizal.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <h1>Selamat Datang di Portfolio Saya</h1>
+        <p>Ini adalah contoh sederhana dari sebuah website portfolio.</p>
+        
+        <div class="profile-section">
+            <h2>Profil Anda</h2>
+            <div class="input-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" placeholder="Masukkan nama Anda">
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Masukkan email Anda">
+            </div>
+            <div class="input-group">
+                <label for="phone">Nomor Telepon:</label>
+                <input type="tel" id="phone" placeholder="Masukkan nomor telepon Anda">
+            </div>
+            <div class="input-group">
+                <label for="social">Link Media Sosial:</label>
+                <input type="url" id="social" placeholder="Masukkan URL media sosial Anda">
+            </div>
+            <div class="input-group">
+                <label for="bio">Deskripsi Singkat:</label>
+                <textarea id="bio" placeholder="Ceritakan sedikit tentang diri Anda"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="skills">Keahlian:</label>
+                <input type="text" id="skills" placeholder="Masukkan keahlian Anda (pisahkan dengan koma)">
+            </div>
+            <div class="input-group">
+                <label for="profile-pic">Upload Foto Profil:</label>
+                <input type="file" id="profile-pic" accept="image/*">
+            </div>
+            <button class="btn" onclick="saveProfile()">Simpan Profil</button>
+        </div>
+        
+        <div class="portfolio-section">
+            <h2>Portfolio Anda</h2>
+            <div class="input-group">
+                <label for="project-name">Nama Proyek:</label>
+                <input type="text" id="project-name" placeholder="Masukkan nama proyek Anda">
+            </div>
+            <div class="input-group">
+                <label for="project-desc">Deskripsi Proyek:</label>
+                <textarea id="project-desc" placeholder="Deskripsikan proyek Anda"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="project-img">Upload Gambar Proyek:</label>
+                <input type="file" id="project-img" accept="image/*">
+            </div>
+            <button class="btn" onclick="addProject()">Tambahkan Proyek</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Hasil Profil</h2>
+            <p><strong>Nama:</strong> <span id="output-name"></span></p>
+            <p><strong>Email:</strong> <span id="output-email"></span></p>
+            <p><strong>Telepon:</strong> <span id="output-phone"></span></p>
+            <p><strong>Media Sosial:</strong> <a id="output-social" href="#" target="_blank"></a></p>
+            <p><strong>Deskripsi:</strong> <span id="output-bio"></span></p>
+            <p><strong>Keahlian:</strong> <span id="output-skills"></span></p>
+            <img id="output-pic" src="" alt="Foto Profil" class="profile-pic" style="display:none;">
+            
+            <h2>Proyek Anda</h2>
+            <div id="project-list" class="project-grid"></div>
+        </div>
+        
+        <button class="btn toggle" onclick="toggleDarkMode()">Mode Gelap/Terang</button>
+    </div>
+    <script src="3046_Rizal.js"></script>
+</body>
+</html>
